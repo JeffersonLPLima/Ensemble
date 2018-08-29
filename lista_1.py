@@ -13,8 +13,10 @@ import numpy as np
 #metrics
 from sklearn.metrics import f1_score, roc_curve, auc, roc_auc_score
 ##from imblearn.metrics import geometric_mean_score
+#
 
-dataset = 'data_1'
+# no dataset2, algumas amostras (4 ou 5) possuiam algumas características "?", as quais foram substituídas por 0
+dataset = 'data_2'
 
 # Generate a classification dataset
 data = np.genfromtxt(dataset+".txt",delimiter=',',dtype='str')
@@ -34,10 +36,19 @@ for i in range(len(y)):
         _true+=1
         y_.append(1)
 
-input()      
+     
 y = np.array(y_)
 X = X.astype(np.float)
 
+
+#ploting histogram of classes
+##import matplotlib.pyplot as plt
+##import numpy as np
+##plt.hist(y, bins=30)
+##plt.ylabel('class');
+##plt.show()
+##
+##input()
 # Scale the variables to have 0 mean and unit variance
 scaler = StandardScaler()
 
