@@ -16,7 +16,7 @@ from sklearn.metrics import f1_score, roc_curve, auc, roc_auc_score
 #
 
 # no dataset2, algumas amostras (4 ou 5) possuiam algumas características "?", as quais foram substituídas por 0
-dataset = 'data_2'
+dataset = 'data_1'
 
 # Generate a classification dataset
 data = np.genfromtxt(dataset+".txt",delimiter=',',dtype='str')
